@@ -8,7 +8,6 @@ public class ProductsController : Controller
 
     public ProductsController(IStoreRepository<Product> repository)
     {
-        
         _repo = repository;
     }
 
@@ -61,7 +60,7 @@ public class ProductsController : Controller
     }
 
     // GET: PRODUCTS/Edit/5
-    public async Task<IActionResult> Edit(int? productid)
+    public async Task<IActionResult> UpdateStock(int? productid)
     {
         if (productid == null)
         {
@@ -81,7 +80,7 @@ public class ProductsController : Controller
     // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Edit(int? productid, [Bind("ProductId,ProdCatId,Description,Manufacturer,Stock,BuyPrice,SellPrice,ProdCat")] Product product)
+    public async Task<IActionResult> UpdateStock(int? productid, [Bind("ProductId,ProdCatId,Description,Manufacturer,Stock,BuyPrice,SellPrice,ProdCat")] Product product)
     {
         if (productid != product.ProductId)
         {

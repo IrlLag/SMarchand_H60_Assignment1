@@ -10,11 +10,13 @@ builder.Services.AddDbContext<H60AssignmentDbSmContext>(options => options.UseSq
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-//builder.Services.AddDbContext<H60AssignmentDbSmContext>(options =>
+builder.Services.AddDbContext<H60AssignmentDbSmContext>(options =>
 
-//options.UseSqlServer(builder.Configuration.GetConnectionString("MyConnection"))
+options.UseSqlServer(builder.Configuration.GetConnectionString("MyConnection"))
 
-//);
+);
+
+builder.Services.AddScoped<IStoreRepository<Product>, ProductRepository>();
 
 var app = builder.Build();
 

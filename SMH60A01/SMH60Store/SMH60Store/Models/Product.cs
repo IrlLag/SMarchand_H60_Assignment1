@@ -5,60 +5,81 @@ namespace SMH60Store.Models;
 
 public partial class Product
 {
-    private int _productId;
-    private int _prodCatId;
-    private string? _description;
-    private string? _manufacturer;
-    private int _stock;
-    private decimal? _buyPrice;
-    private decimal? _sellPrice;
-    private ProductCategory _prodCat = null!;
-
+    public static int CurrentProductId = 0;
     public int ProductId
     {
-        get => _productId;
-        set => _productId = value;
+        get;
+        set;
     }
 
     public int ProdCatId
     {
-        get => _prodCatId;
-        set => _prodCatId = value;
+        get;
+        set;
     }
 
     public string? Description
     {
-        get => _description;
-        set => _description = value;
+        get;
+        set;
     }
 
     public string? Manufacturer
     {
-        get => _manufacturer;
-        set => _manufacturer = value;
+        get;
+        set;
     }
 
     public int Stock
     {
-        get => _stock;
-        set => _stock = value;
+        get;
+        set;
     }
 
     public decimal? BuyPrice
     {
-        get => _buyPrice;
-        set => _buyPrice = value;
+        get;
+        set;
     }
 
     public decimal? SellPrice
     {
-        get => _sellPrice;
-        set => _sellPrice = value;
+        get;
+        set;
     }
 
     public virtual ProductCategory ProdCat
     {
-        get => _prodCat;
-        set => _prodCat = value;
+        get;
+        set;
+    }
+
+    public Product()
+    {
+
+    }
+    public Product(int productId)
+    {
+        ProductId = productId;
+    }
+    public Product(int productId, int prodCatId, string? description, string? manufacturer, int stock, decimal? buyPrice, decimal? sellPrice)
+    {
+        ProductId = productId;
+        ProdCatId = prodCatId;
+        Description = description;
+        Manufacturer = manufacturer;
+        Stock = stock;
+        BuyPrice = buyPrice;
+        SellPrice = sellPrice;
+    }
+    public Product( int prodCatId, string? description, string? manufacturer, int stock, decimal? buyPrice, decimal? sellPrice)
+    {
+        ProductId = CurrentProductId++;
+        ProdCatId = prodCatId;
+        Description = description;
+        Manufacturer = manufacturer;
+        Stock = stock;
+        BuyPrice = buyPrice;
+        SellPrice = sellPrice;
     }
 }
