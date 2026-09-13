@@ -1,5 +1,13 @@
 @model IEnumerable<SMH60Store.Models.Product>
 
+@functions {
+    private IHtmlHelper<IEnumerable<Product>> _html;
+    private IJsonHelper _json;
+    private IViewComponentHelper _component;
+    private IUrlHelper _url;
+    private IModelExpressionProvider _modelExpressionProvider;
+}
+
 @{
     ViewData["Title"] = "Index";
 }

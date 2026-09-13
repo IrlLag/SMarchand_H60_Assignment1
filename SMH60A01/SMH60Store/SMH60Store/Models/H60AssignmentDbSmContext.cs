@@ -6,6 +6,9 @@ namespace SMH60Store.Models;
 
 public partial class H60AssignmentDbSmContext : DbContext
 {
+    private DbSet<Product> _products;
+    private DbSet<ProductCategory> _productCategories;
+
     public H60AssignmentDbSmContext()
     {
     }
@@ -15,9 +18,17 @@ public partial class H60AssignmentDbSmContext : DbContext
     {
     }
 
-    public virtual DbSet<Product> Products { get; set; }
+    public virtual DbSet<Product> Products
+    {
+        get => _products;
+        set => _products = value;
+    }
 
-    public virtual DbSet<ProductCategory> ProductCategories { get; set; }
+    public virtual DbSet<ProductCategory> ProductCategories
+    {
+        get => _productCategories;
+        set => _productCategories = value;
+    }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
@@ -29,7 +40,7 @@ public partial class H60AssignmentDbSmContext : DbContext
         {
             entity.ToTable("Product");
 
-            entity.HasIndex(e => e.ProdCatId, "IX_Product_ProdCatId");
+            entity.HasIndex(e => e.ProdCatId, "Product_ProdCatId");
 
             entity.Property(e => e.ProductId).HasColumnName("ProductID");
             entity.Property(e => e.BuyPrice).HasColumnType("numeric(8, 2)");
@@ -39,6 +50,7 @@ public partial class H60AssignmentDbSmContext : DbContext
             entity.Property(e => e.Manufacturer)
                 .HasMaxLength(80)
                 .IsUnicode(false);
+            entity.Property(e => e.ProdCatId).HasColumnName("ProdCatId");
             entity.Property(e => e.SellPrice).HasColumnType("numeric(8, 2)");
 
             entity.HasOne(d => d.ProdCat).WithMany(p => p.Products)
@@ -49,11 +61,11 @@ public partial class H60AssignmentDbSmContext : DbContext
 
         modelBuilder.Entity<ProductCategory>(entity =>
         {
-            entity.HasKey(e => e.CategoryId);
+            entity.HasKey(e => e.ProdCatID);
 
             entity.ToTable("ProductCategory");
 
-            entity.Property(e => e.CategoryId).HasColumnName("CategoryID");
+            entity.Property(e => e.ProdCatID).HasColumnName("ProdCatId");
             entity.Property(e => e.ProdCat)
                 .HasMaxLength(60)
                 .IsUnicode(false);

@@ -1,2 +1,9 @@
-﻿<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+﻿@functions {
+    private IHtmlHelper<dynamic> _html;
+    private IJsonHelper _json;
+    private IViewComponentHelper _component;
+    private IUrlHelper _url;
+    private IModelExpressionProvider _modelExpressionProvider;
+}
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
 <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>

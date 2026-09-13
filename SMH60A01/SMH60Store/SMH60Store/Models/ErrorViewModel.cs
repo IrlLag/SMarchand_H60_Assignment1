@@ -2,7 +2,13 @@ namespace SMH60Store.Models
 {
     public class ErrorViewModel
     {
-        public string? RequestId { get; set; }
+        private string? _requestId;
+
+        public string? RequestId
+        {
+            get => _requestId;
+            set => _requestId = value;
+        }
 
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
     }

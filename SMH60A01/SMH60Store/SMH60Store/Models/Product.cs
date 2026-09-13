@@ -1,50 +1,64 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Net.Http.Headers;
 
 namespace SMH60Store.Models;
 
 public partial class Product
 {
-    public static int CurrentProductId { get; set; } = 0;
-    public int ProductId { get; set; }
+    private int _productId;
+    private int _prodCatId;
+    private string? _description;
+    private string? _manufacturer;
+    private int _stock;
+    private decimal? _buyPrice;
+    private decimal? _sellPrice;
+    private ProductCategory _prodCat = null!;
 
-    public int ProdCatId { get; set; }
-
-    public string? Description { get; set; }
-
-    public string? Manufacturer { get; set; }
-
-    public int Stock { get; set; }
-
-    public decimal? BuyPrice { get; set; }
-
-    public decimal? SellPrice { get; set; }
-
-    public virtual ProductCategory ProdCat { get; set; } = null!;
-
-    public Product()
+    public int ProductId
     {
-        ProductId = ++CurrentProductId;
+        get => _productId;
+        set => _productId = value;
     }
-    public Product(int id, string description, string manufacturer, int stock, decimal? buyPrice, decimal? sellPrice)
+
+    public int ProdCatId
     {
-        ProductId = id;
-        Description = description;
-        Manufacturer = manufacturer;
-        Stock = stock;
-        BuyPrice = buyPrice;
-        SellPrice = sellPrice;
+        get => _prodCatId;
+        set => _prodCatId = value;
     }
-    public Product( string description, string manufacturer, int stock, decimal? buyPrice, decimal? sellPrice)
+
+    public string? Description
     {
-        ProductId = ++CurrentProductId;
-        Description = description;
-        Manufacturer = manufacturer;
-        Stock = stock;
-        BuyPrice = buyPrice;
-        SellPrice = sellPrice;
+        get => _description;
+        set => _description = value;
+    }
+
+    public string? Manufacturer
+    {
+        get => _manufacturer;
+        set => _manufacturer = value;
+    }
+
+    public int Stock
+    {
+        get => _stock;
+        set => _stock = value;
+    }
+
+    public decimal? BuyPrice
+    {
+        get => _buyPrice;
+        set => _buyPrice = value;
+    }
+
+    public decimal? SellPrice
+    {
+        get => _sellPrice;
+        set => _sellPrice = value;
+    }
+
+    public virtual ProductCategory ProdCat
+    {
+        get => _prodCat;
+        set => _prodCat = value;
     }
 }

@@ -5,9 +5,25 @@ namespace SMH60Store.Models;
 
 public partial class ProductCategory
 {
-    public int CategoryId { get; set; }
+    private int _prodCatId;
+    private string? _prodCat = null;
+    private ICollection<Product> _products = new List<Product>();
 
-    public string ProdCat { get; set; } = null!;
+    public int ProdCatID
+    {
+        get => _prodCatId;
+        set => _prodCatId = value;
+    }
 
-    public virtual ICollection<Product> Products { get; set; } = new List<Product>();
+    public string ProdCat
+    {
+        get => _prodCat;
+        set => _prodCat = value;
+    }
+
+    public virtual ICollection<Product> Products
+    {
+        get => _products;
+        set => _products = value;
+    }
 }

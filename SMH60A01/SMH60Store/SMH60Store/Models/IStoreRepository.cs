@@ -2,18 +2,17 @@
 
 namespace SMH60Store.Models
 {
-    public interface IStoreRepository
+    public interface IStoreRepository<T>
     {
-        public Task<List<Product>> GetProducts(H60AssignmentDbSmContext context);
+        public Task<List<T>> GetList();
 
-        public void AddProduct(H60AssignmentDbSmContext context, Product product);
+        public void Add( T item);
 
-        public void UpdateProduct(H60AssignmentDbSmContext context, Product product);
+        public void Update( T item);
 
+        public void Delete( T item);
 
-        public void DeleteProduct(H60AssignmentDbSmContext context, Product product);
-
-        public Task<Product?> GetProductById(H60AssignmentDbSmContext context, int? id);
+        public Task<T?> GetById( int? id);
 
     }
 }

@@ -3,20 +3,20 @@ using SMH60Store.Models;
 using System.Diagnostics;
 public class ProductsController : Controller
 {
-    private readonly H60AssignmentDbSmContext _context;
-    Product _product = new Product();
 
-    public ProductsController(H60AssignmentDbSmContext context, Product product)
+    private readonly IStoreRepository<Product> _repo;
+
+    public ProductsController(IStoreRepository<Product> repository)
     {
-        _context = context;
-        _product = product;
+        
+        _repo = repository;
     }
 
     // GET: PRODUCTS
     public async Task<IActionResult> Index()    
     {
         
-        return View(await _product.GetProducts(_context));
+        return View(await _repo.GetList());
     }
 
     // GET: PRODUCTS/Details/5
@@ -28,7 +28,7 @@ public class ProductsController : Controller
             return NotFound();
         }
 
-        var product = _product.GetProductById(_context, productid);
+        var product = await _repo.GetById(productid);
 
 
         if (product == null)
@@ -54,7 +54,7 @@ public class ProductsController : Controller
     {
         if (ModelState.IsValid)
         {
-            _product.AddProduct(_context, product);
+            _repo.Add(product);
             return RedirectToAction(nameof(Index));
         }
         return View(product);
@@ -68,7 +68,7 @@ public class ProductsController : Controller
             return NotFound();
         }
 
-        var product = await _product.GetProductById(_context, productid);
+        var product = await _repo.GetById(productid);
         if (product == null)
         {
             return NotFound();
@@ -92,7 +92,7 @@ public class ProductsController : Controller
         {
             try
             {
-                _product.UpdateProduct(_context, product);
+                _repo.Update(product);
             }
             catch
             {
@@ -118,7 +118,7 @@ public class ProductsController : Controller
             return NotFound();
         }
 
-        var product = await _product.GetProductById(_context, productid);
+        var product = await _repo.GetById(productid);
         if (product == null)
         {
             return NotFound();
@@ -132,10 +132,10 @@ public class ProductsController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> DeleteConfirmed(int? productid)
     {
-        var product = await _product.GetProductById(_context, productid);
+        var product = await _repo.GetById(productid);
         if (product != null)
         {
-            _product.DeleteProduct(_context, product);
+            _repo.Delete(product);
         }
 
         return RedirectToAction(nameof(Index));
@@ -143,6 +143,6 @@ public class ProductsController : Controller
 
     private bool ProductExists(int? productid)
     {
-        return _product.GetProducts(_context).Result.Any(e => e.ProductId == productid);
+        return _repo.GetList().Result.Any(e => e.ProductId == productid);
     }
 }
