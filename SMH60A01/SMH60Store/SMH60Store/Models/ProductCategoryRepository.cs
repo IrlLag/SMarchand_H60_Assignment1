@@ -15,24 +15,27 @@ namespace SMH60Store.Models
             return await _context.ProductCategories.OrderBy(pc => pc.ProdCat).ToListAsync();
         }
 
-        public void Add(ProductCategory item)
+        public async void Add(ProductCategory item)
         {
-            throw new NotImplementedException();
+            _context.ProductCategories.Add(item);
+            await _context.SaveChangesAsync();
         }
 
-        public void Update(ProductCategory item)
+        public async void Update(ProductCategory item)
         {
-            throw new NotImplementedException();
+            _context.ProductCategories.Update(item);
+            await _context.SaveChangesAsync();
         }
 
-        public void Delete(ProductCategory item)
+        public async void Delete(ProductCategory item)
         {
-            throw new NotImplementedException();
+            _context.ProductCategories.Remove(item);
+            await _context.SaveChangesAsync();
         }
 
-        public Task<ProductCategory?> GetById(int? id)
+        public async Task<ProductCategory?> GetById(int? id)
         {
-            throw new NotImplementedException();
+            return await _context.ProductCategories.FindAsync(id);
         }
     }
 }

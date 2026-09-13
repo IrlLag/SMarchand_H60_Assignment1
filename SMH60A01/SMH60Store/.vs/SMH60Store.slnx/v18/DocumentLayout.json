@@ -41,6 +41,10 @@
           "SelectedChildIndex": 7,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "ProductRepository.cs",
@@ -50,12 +54,7 @@
               "RelativeToolTip": "SMH60Store\\Models\\ProductRepository.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAYwA4AAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-13T17:54:03.559Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "WhenOpened": "2026-09-13T17:54:03.559Z"
             },
             {
               "$type": "Document",
@@ -67,8 +66,7 @@
               "RelativeToolTip": "SMH60Store\\Controllers\\ProductCategoriesController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAI0AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-13T16:39:47.716Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-13T16:39:47.716Z"
             },
             {
               "$type": "Document",
@@ -80,8 +78,7 @@
               "RelativeToolTip": "SMH60Store\\Views\\Home\\Privacy.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-13T03:55:30.06Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-13T03:55:30.06Z"
             },
             {
               "$type": "Document",
@@ -93,8 +90,7 @@
               "RelativeToolTip": "SMH60Store\\Models\\ProductCategory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-12T23:53:20.095Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-12T23:53:20.095Z"
             },
             {
               "$type": "Document",
@@ -106,8 +102,7 @@
               "RelativeToolTip": "SMH60Store\\Controllers\\ProductsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAIgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-06T03:31:51.161Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-06T03:31:51.161Z"
             },
             {
               "$type": "Document",
@@ -119,8 +114,7 @@
               "RelativeToolTip": "SMH60Store\\Models\\Product.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAA2wAUAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-13T01:07:39.108Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-13T01:07:39.108Z"
             },
             {
               "$type": "Document",
@@ -130,7 +124,7 @@
               "RelativeDocumentMoniker": "SMH60Store\\Models\\ProductCategoryRepository.cs",
               "ToolTip": "C:\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\Models\\ProductCategoryRepository.cs",
               "RelativeToolTip": "SMH60Store\\Models\\ProductCategoryRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAzwAsAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA6wBcAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-12T21:28:45.45Z",
               "EditorCaption": ""
