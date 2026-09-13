@@ -61,11 +61,11 @@ public partial class H60AssignmentDbSmContext : DbContext
 
         modelBuilder.Entity<ProductCategory>(entity =>
         {
-            entity.HasKey(e => e.ProdCatID);
+            entity.HasKey(e => e.ProdCatId);
 
             entity.ToTable("ProductCategory");
 
-            entity.Property(e => e.ProdCatID).HasColumnName("ProdCatId");
+            entity.Property(e => e.ProdCatId).HasColumnName("ProdCatId");
             entity.Property(e => e.ProdCat)
                 .HasMaxLength(60)
                 .IsUnicode(false);

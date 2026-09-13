@@ -12,7 +12,7 @@ namespace SMH60Store.Models
         }
         public async Task<List<Product>> GetList()
         {
-            return await _context.Products.ToListAsync();
+            return await _context.Products.OrderBy(p => p.Description).ToListAsync();
         }
 
         public async void Add(Product product)

@@ -3,6 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using SMH60Store.Models;
 
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("H60AssignmentDbSmContext") ?? throw new InvalidOperationException("Connection string 'H60AssignmentDbSmContext' not found.");
+
+builder.Services.AddDbContext<H60AssignmentDbSmContext>(options => options.UseSqlServer(connectionString));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

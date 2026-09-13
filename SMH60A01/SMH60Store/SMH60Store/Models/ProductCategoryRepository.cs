@@ -1,4 +1,6 @@
-﻿namespace SMH60Store.Models
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace SMH60Store.Models
 {
     public class ProductCategoryRepository : IStoreRepository<ProductCategory>
     {
@@ -8,9 +10,9 @@
         {
             _context = context;
         }
-        public Task<List<ProductCategory>> GetList()
+        public async Task<List<ProductCategory>> GetList()
         {
-            throw new NotImplementedException();
+            return await _context.ProductCategories.OrderBy(pc => pc.ProdCat).ToListAsync();
         }
 
         public void Add(ProductCategory item)
