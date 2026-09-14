@@ -35,7 +35,7 @@ namespace SMH60Store.Models
 
         public async Task<Product?> GetById(int? id)
         {
-            throw new NotImplementedException();
+            return await _context.Products.FirstOrDefaultAsync(p => p.ProductId == id);
         }
     }
 }
