@@ -15,19 +15,19 @@ namespace SMH60Store.Models
             return await _context.ProductCategories.OrderBy(pc => pc.ProdCat).ToListAsync();
         }
 
-        public async void Add(ProductCategory item)
+        public async Task Add(ProductCategory item)
         {
             _context.ProductCategories.Add(item);
             await _context.SaveChangesAsync();
         }
 
-        public async void Update(ProductCategory item)
+        public async Task Update(ProductCategory item)
         {
             _context.ProductCategories.Update(item);
             await _context.SaveChangesAsync();
         }
 
-        public async void Delete(ProductCategory item)
+        public async Task Delete(ProductCategory item)
         {
             _context.ProductCategories.Remove(item);
             await _context.SaveChangesAsync();

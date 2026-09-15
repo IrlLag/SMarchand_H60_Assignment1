@@ -17,6 +17,7 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("MyConnection"))
 );
 
 builder.Services.AddScoped<IStoreRepository<Product>, ProductRepository>();
+builder.Services.AddScoped<IStoreRepository<ProductCategory>, ProductCategoryRepository>();
 
 var app = builder.Build();
 

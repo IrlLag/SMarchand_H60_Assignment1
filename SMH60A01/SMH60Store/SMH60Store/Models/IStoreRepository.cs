@@ -6,11 +6,11 @@ namespace SMH60Store.Models
     {
         public Task<List<T>> GetList();
 
-        public void Add( T item);
+        public Task Add( T item);
 
-        public void Update( T item);
+        public Task Update( T item);
 
-        public void Delete( T item);
+        public Task Delete( T item);
 
         public Task<T?> GetById( int? id);
 

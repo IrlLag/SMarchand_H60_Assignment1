@@ -4,10 +4,12 @@ using SMH60Store.Models;
 public class ProductsController : Controller
 {
     private readonly IStoreRepository<Product> _repo;
+    private readonly IStoreRepository<ProductCategory> _repo_category;
 
-    public ProductsController(IStoreRepository<Product> repository)
+    public ProductsController(IStoreRepository<Product> repository, IStoreRepository<ProductCategory> repository_category)
     {
         _repo = repository;
+        _repo_category = repository_category;
     }
 
     // GET: PRODUCTS
@@ -41,9 +43,11 @@ public class ProductsController : Controller
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create(
-        [Bind("ProductId,ProdCatId,Description,Manufacturer,Stock,BuyPrice,SellPrice,ProdCat")]
+        [Bind("ProductId,ProdCatId,Description,Manufacturer,Stock,BuyPrice,SellPrice")]
         Product product)
     {
+        product.ProdCat = await _repo_category.GetById(product.ProdCatId);
+
         if (ModelState.IsValid)
         {
             _repo.Add(product);
@@ -71,34 +75,46 @@ public class ProductsController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> UpdateStock(int? productid, int? stock)
     {
-        if (productid is null)
+        try
         {
-            return NotFound();
-        }
-
-        if (stock is null)
-        {
-            ViewData["ErrorMessage"] += "There is no stock value in the field";
-            return View();
-        }
-        else
-        {
-            var product = await _repo.GetById(productid);
-            if (product is null)
+            if (productid is null)
             {
                 return NotFound();
             }
 
-            if( product.Stock + (int)stock < 0 )
+            if (stock is null)
             {
-                ViewData["ErrorMessage"] += "The final stock value cannot be negative";
-                return View();
+                throw new ArgumentNullException( "stock cannot be null ");
+                
             }
+            else
+            {
+                var product = await _repo.GetById(productid);
+                if (product is null)
+                {
+                    return NotFound();
+                }
 
-            product.Stock += (int)stock;
-            _repo.Update(product);
+                if (product.Stock + (int)stock < 0)
+                {
+                    throw new ArithmeticException("Final stock value cannot be negative ");
+                }
 
-            return RedirectToAction(nameof(Index));
+                product.Stock += (int)stock;
+                _repo.Update(product);
+
+                return RedirectToAction(nameof(Index));
+            }
+        }
+        catch (ArithmeticException ex)
+        {
+            ViewData["ErrorMessage"] += ex.Message;
+            return View();
+        }
+        catch(Exception ArgumentNullException)
+        {
+            ViewData["ErrorMessage"] += ArgumentNullException.Message ;
+            return View();
         }
     }
 

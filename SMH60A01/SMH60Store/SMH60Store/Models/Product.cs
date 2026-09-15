@@ -48,11 +48,11 @@ public partial class Product
         set;
     }
 
-    public virtual ProductCategory ProdCat
+    public virtual ProductCategory? ProdCat
     {
         get;
         set;
-    }
+    } = null;
 
     public Product()
     {
