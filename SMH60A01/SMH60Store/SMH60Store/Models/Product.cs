@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace SMH60Store.Models;
 
@@ -41,7 +42,7 @@ public partial class Product
         get;
         set;
     }
-
+    
     public decimal? SellPrice
     {
         get;

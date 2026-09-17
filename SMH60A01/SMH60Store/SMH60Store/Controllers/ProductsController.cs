@@ -50,6 +50,11 @@ public class ProductsController : Controller
 
         if (ModelState.IsValid)
         {
+            if (product.SellPrice < product.BuyPrice)
+            {
+                ModelState.AddModelError("SellPrice", "Sell price must be greater than or equal to buy price.");
+                return View(product);
+            }
             _repo.Add(product);
             return RedirectToAction(nameof(Index));
         }

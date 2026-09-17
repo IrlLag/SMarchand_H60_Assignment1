@@ -69,8 +69,8 @@
                 @Html.DisplayFor(model => item.ProdCat)
             </td>
             <td>
-                <a asp-action="UpdateStock" asp-route-productid="@item.ProductId">Update Stock</a> |
-                    @* <a asp-action="UpdateBuySell" asp-route-productid="@item.ProductId">Update Buy & Sell Prices</a> |*@
+                <a asp-action="UpdateStock" asp-route-productid="@item.ProductId">Update Stock</a> 
+                <a asp-action="UpdateBuySellPrice" asp-route-productid="@item.ProductId">Update Buy & Sell Prices</a> |
                 <a asp-action="Details" asp-route-id="@item.ProductId">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.ProductId">Delete</a>
             </td>
