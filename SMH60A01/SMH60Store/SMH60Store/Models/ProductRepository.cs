@@ -39,7 +39,12 @@ namespace SMH60Store.Models
 
         public async Task<Product?> GetById(int? id)
         {
-            return await _context.Products.FirstOrDefaultAsync(p => p.ProductId == id);
+            var product = await _context.Products.FirstOrDefaultAsync(p => p.ProductId == id);
+            if (product is not null)
+            {
+                product.ProdCat = await _context.ProductCategories.FirstOrDefaultAsync(pc => pc.ProdCatId == product.ProdCatId);
+            }
+            return product;
         }
     }
 }

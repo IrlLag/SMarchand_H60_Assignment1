@@ -36,10 +36,12 @@
             <th>
                 @Html.DisplayNameFor(model => model.Description)
             </th>
-            
-            <th>
-                @Html.DisplayNameFor(model => model.Stock)
-            </th>
+            @if (ViewBag.search != "Category")
+            {
+                <th>
+                    @Html.DisplayNameFor(model => model.Stock)
+                </th>
+            }
             <th>
                 @Html.DisplayNameFor(model => model.SellPrice)
             </th>
@@ -53,9 +55,12 @@
             <td>
                 @Html.DisplayFor(model => item.Description)
             </td>
-            <td>
-                @Html.DisplayFor(model => item.Stock)
-            </td>
+            @if (ViewBag.search != "Category")
+            {
+                <td>
+                    @Html.DisplayFor(model => item.Stock)
+                </td>
+            }
             <td>
                 @Html.DisplayFor(model => item.SellPrice)
             </td>
