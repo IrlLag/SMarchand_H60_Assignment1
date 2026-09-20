@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SMH60Store")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+777a32aa7438c9de8353b6a142b1e4fd7c72be83")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a7226bbf8854fb20a21393510eb0a7005668ab20")]
 [assembly: System.Reflection.AssemblyProductAttribute("SMH60Store")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SMH60Store")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

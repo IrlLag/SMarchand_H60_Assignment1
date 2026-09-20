@@ -4,7 +4,7 @@ namespace SMH60Store.Models
 {
     public interface IStoreRepository<T>
     {
-        public Task<List<T>> GetList();
+        public Task<List<T>> GetList(string? search);
 
         public Task Add( T item);
 

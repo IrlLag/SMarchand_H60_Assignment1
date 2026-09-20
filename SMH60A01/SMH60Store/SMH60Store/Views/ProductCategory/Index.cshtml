@@ -9,14 +9,12 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+
 <table class="table">
     <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.ProdCat)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Products)
             </th>
             <th></th>
         </tr>
@@ -26,9 +24,6 @@
         <tr>
             <td>
                 @Html.DisplayFor(model => item.ProdCat)
-            </td>
-            <td>
-                @Html.DisplayFor(model => item.Products)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.ProdCatId">Edit</a> |

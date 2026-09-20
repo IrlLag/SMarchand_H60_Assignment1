@@ -10,8 +10,12 @@ namespace SMH60Store.Models
         {
             _context = context;
         }
-        public async Task<List<Product>> GetList()
+        public async Task<List<Product>> GetList(string? search)
         {
+            if(search == "Category")
+            {
+                return await _context.Products.OrderBy(p => p.ProdCatId).ThenBy(p => p.Description).ToListAsync();
+            }
             return await _context.Products.OrderBy(p => p.Description).ToListAsync();
         }
 

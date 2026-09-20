@@ -21,6 +21,10 @@
         <form asp-action="UpdateBuySellPrice">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="ProductId" />
+            <input type="hidden" asp-for="ProdCatId" />
+            <input type="hidden" asp-for="Description" />
+            <input type="hidden" asp-for="Manufacturer" />
+            <input type="hidden" asp-for="Stock" />
             <div class="form-group">
                 <label asp-for="BuyPrice" class="control-label"></label>
                 <input asp-for="BuyPrice" class="form-control" />

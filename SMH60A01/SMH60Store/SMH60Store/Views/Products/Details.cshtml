@@ -17,12 +17,12 @@
 <div>
     <h4>Product</h4>
     <hr />
-    <dl class="row">
+    </dl>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ProdCatId)
+            <p>Product Category</p>
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ProdCatId)
+            @Html.DisplayFor(model => model.ProdCat.ProdCat)
         </dd>
     </dl>
         <dt class = "col-sm-2">
@@ -59,14 +59,6 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SellPrice)
         </dd>
-    </dl>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ProdCat)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ProdCat)
-        </dd>
-    </dl>
 </div>
 <div>
     <a asp-action="UpdateStock" asp-route-id="@Model?.ProductId">Edit</a> |

@@ -17,29 +17,31 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+<p>
+    
+    @if (ViewBag.search == "Category")
+    {
+        <a asp-action="Index">Sort by Product</a>
+    }
+    else
+    {
+        <a asp-action="Index" asp-route-search="Category">Sort by Category</a>
+    }
+
+</p>
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.ProdCatId)
-            </th>
+            
             <th>
                 @Html.DisplayNameFor(model => model.Description)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Manufacturer)
-            </th>
+            
             <th>
                 @Html.DisplayNameFor(model => model.Stock)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.BuyPrice)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.SellPrice)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ProdCat)
             </th>
             <th></th>
         </tr>
@@ -47,31 +49,20 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
-                @Html.DisplayFor(model => item.ProdCatId)
-            </td>
+            
             <td>
                 @Html.DisplayFor(model => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(model => item.Manufacturer)
             </td>
             <td>
                 @Html.DisplayFor(model => item.Stock)
             </td>
             <td>
-                @Html.DisplayFor(model => item.BuyPrice)
-            </td>
-            <td>
                 @Html.DisplayFor(model => item.SellPrice)
             </td>
             <td>
-                @Html.DisplayFor(model => item.ProdCat)
-            </td>
-            <td>
-                <a asp-action="UpdateStock" asp-route-productid="@item.ProductId">Update Stock</a> 
-                <a asp-action="UpdateBuySellPrice" asp-route-productid="@item.ProductId">Update Buy & Sell Prices</a> |
-                <a asp-action="Details" asp-route-id="@item.ProductId">Details</a> |
+                <a asp-action="UpdateStock" asp-route-productid="@item.ProductId">Update Stock</a> |
+                <a asp-action="UpdateBuySellPrice" asp-route-productid="@item.ProductId">Update Prices</a> |
+                <a asp-action="Details" asp-route-productid="@item.ProductId">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.ProductId">Delete</a>
             </td>
         </tr>

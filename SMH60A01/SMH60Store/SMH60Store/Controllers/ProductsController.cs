@@ -13,9 +13,10 @@ public class ProductsController : Controller
     }
 
     // GET: PRODUCTS
-    public async Task<IActionResult> Index()
+    public async Task<IActionResult> Index(string search)
     {
-        return View(await _repo.GetList());
+        ViewBag.search = search;
+        return View(await _repo.GetList(search));
     }
 
     // GET: PRODUCTS/Details/5
@@ -113,12 +114,12 @@ public class ProductsController : Controller
         }
         catch (ArithmeticException ex)
         {
-            ViewData["ErrorMessage"] += ex.Message;
+            ModelState.AddModelError("Stock", ex.Message);
             return View();
         }
-        catch(Exception ArgumentNullException)
+        catch( ArgumentNullException ex)
         {
-            ViewData["ErrorMessage"] += ArgumentNullException.Message ;
+            ModelState.AddModelError("Stock",ex.Message);
             return View();
         }
     }
@@ -139,16 +140,28 @@ public class ProductsController : Controller
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> UpdateBuySellPrice(int? productid,
-        [Bind("ProductId,ProdCatId,Description,Manufacturer,Stock,BuyPrice,SellPrice,ProdCat")]
+        [Bind("ProductId,ProdCatId,Description,Manufacturer,Stock,BuyPrice,SellPrice")]
         Product product)
     {
+       
         if (productid != product.ProductId) return NotFound();
 
         if (ModelState.IsValid)
         {
             try
             {
-                _repo.Update(product);
+                if (product.SellPrice < product.BuyPrice)
+                {
+                    throw new ArithmeticException();
+                }
+
+                await _repo.Update(product);
+                return RedirectToAction(nameof(Index));
+            }
+            catch (ArithmeticException )
+            {
+                ModelState.AddModelError("SellPrice", "Sell price must be greater than or equal to buy price.");
+                return View(product);
             }
             catch
             {
@@ -157,7 +170,7 @@ public class ProductsController : Controller
                 throw;
             }
 
-            return RedirectToAction(nameof(Index));
+            
         }
 
         return View(product);
@@ -188,6 +201,6 @@ public class ProductsController : Controller
 
     private bool ProductExists(int? productid)
     {
-        return _repo.GetList().Result.Any(e => e.ProductId == productid);
+        return _repo.GetList("").Result.Any(e => e.ProductId == productid);
     }
 }

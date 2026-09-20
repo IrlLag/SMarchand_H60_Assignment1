@@ -13,9 +13,9 @@ public class ProductCategoryController : Controller
     }
 
     // GET: PRODUCTCATEGORYS
-    public async Task<IActionResult> Index()    
+    public async Task<IActionResult> Index(string? search)    
     {
-        return View(await _repo.GetList());
+        return View(await _repo.GetList(search));
     }
 
     // GET: PRODUCTCATEGORYS/Details/5
