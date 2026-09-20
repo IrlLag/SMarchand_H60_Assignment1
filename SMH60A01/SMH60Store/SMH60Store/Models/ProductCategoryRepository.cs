@@ -35,7 +35,8 @@ namespace SMH60Store.Models
 
         public async Task<ProductCategory?> GetById(int? id)
         {
-            return await _context.ProductCategories.FindAsync(id);
+            return await _context.ProductCategories.Include(pc => pc.Products).FirstOrDefaultAsync(pc => pc.ProdCatId == id);
         }
+
     }
 }
