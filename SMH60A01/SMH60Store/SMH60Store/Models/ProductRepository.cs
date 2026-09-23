@@ -34,6 +34,10 @@ namespace SMH60Store.Models
         public async Task Delete(Product product)
         {
             _context.Products.Remove(product);
+            var orderitemList = await _context.OrderItems.Where(oi => oi.ProductId == product.ProductId).ToListAsync();
+            _context.OrderItems.RemoveRange(orderitemList);
+            var cartItemLisy = await _context.CartItems.Where(oi => oi.ProductId == product.ProductId).ToListAsync();
+            _context.OrderItems.RemoveRange(orderitemList);
             await _context.SaveChangesAsync();
         }
 

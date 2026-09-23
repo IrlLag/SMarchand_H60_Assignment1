@@ -194,7 +194,7 @@ public class ProductsController : Controller
     public async Task<IActionResult> DeleteConfirmed(int? productid)
     {
         var product = await _repo.GetById(productid);
-        if (product != null) _repo.Delete(product);
+        if (product != null) await _repo.Delete(product);
 
         return RedirectToAction(nameof(Index));
     }

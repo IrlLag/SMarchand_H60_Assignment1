@@ -7,7 +7,10 @@ html {
     font-size: 16px;
   }
 }
-
+:root{
+    --background:#c4e0ff;
+    --whitetext:#ffffff;
+}
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
@@ -17,6 +20,14 @@ html {
   min-height: 100%;
 }
 
+header{}
+
 body {
   margin-bottom: 60px;
+}
+h1{
+    
+}
+p {
+    
 }
