@@ -54,7 +54,8 @@ public partial class Product
         get;
         set;
     } = null;
-
+    public virtual ICollection<OrderItem>OrderItems{ get; set; } = new List<OrderItem>();
+    public virtual ICollection<CartItem> CartItems { get; set; } = new List<CartItem>();
     public Product()
     {
 

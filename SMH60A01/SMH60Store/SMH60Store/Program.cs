@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-
 using SMH60Store.Models;
 
 var builder = WebApplication.CreateBuilder(args);
