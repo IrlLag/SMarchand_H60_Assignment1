@@ -185,6 +185,7 @@ public partial class H60AssignmentDbSmContext : DbContext
 
             entity.Property(e => e.ShoppingCartId).HasColumnName("ShoppingCartID");
             entity.Property(e => e.CustomerId).HasColumnName("CustomerId");
+            entity.Property(e => e.DateCreated).HasColumnType("datetime");
 
             entity.HasOne(d => d.Customer).WithOne(p => p.ShoppingCart)
                 .OnDelete(DeleteBehavior.ClientSetNull)
@@ -212,6 +213,26 @@ public partial class H60AssignmentDbSmContext : DbContext
                 .HasConstraintName("FK_CartItem_Product");
         });
 
+        modelBuilder.Entity<Customer>().HasData(
+                new Customer() { CustomerId = 1, FirstName = "Schmingus", LastName = "McBingus", Email = "schmingbing@gmail.com", PhoneNumber = "1234567890", Province = "QC", CreditCard = "1234567890123456" },
+                new Customer() { CustomerId = 2, FirstName = "Oingus", LastName = "Boingus", Email = "oingboing@gmail.com", PhoneNumber = "1234567890", Province = "NS", CreditCard = "1234567890123456" },
+                new Customer() { CustomerId = 3, FirstName = "Quandale", LastName = "Dingle", Email = "QuandaleDingle@gmail.com", PhoneNumber = "1234567890", Province = "BC", CreditCard = "1234567890123456" }
+            );
+        modelBuilder.Entity<ShoppingCart>().HasData(
+                new ShoppingCart() { ShoppingCartId = 1, CustomerId = 1, DateCreated = DateTime.Now }
+            );
+        modelBuilder.Entity<CartItem>().HasData(
+                new CartItem() { CartItemId = 1, ShoppingCartId = 1, ProductId = 3, Quantity = 1, Price = 25.00m },
+                new CartItem() { CartItemId = 2, ShoppingCartId = 1, ProductId = 2, Quantity = 3, Price = 780.00m }
+            );
+        modelBuilder.Entity<Order>().HasData(
+                new Order() { OrderId = 1, CustomerId = 3, DateCreated = DateTime.Now, DateFufilled = DateTime.Now }
+            );
+        modelBuilder.Entity<OrderItem>().HasData(
+                new OrderItem() { OrderItemId = 1, OrderId = 1, ProductId = 3, Quantity = 1, Price = 25.00m },
+                new OrderItem() { OrderItemId = 2, OrderId = 1, ProductId = 4, Quantity = 1, Price = 80.00m },
+                new OrderItem() { OrderItemId = 3, OrderId = 1, ProductId = 6, Quantity = 2, Price = 40.00m }
+            );
         OnModelCreatingPartial(modelBuilder);
     }
 

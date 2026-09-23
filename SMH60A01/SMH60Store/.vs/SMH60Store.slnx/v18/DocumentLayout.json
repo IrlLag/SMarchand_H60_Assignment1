@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\Migrations\\20260923020058_AddPartBClasses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SMH60Store\\Migrations\\20260923020058_AddPartBClasses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9DA8F609-46C9-9A44-CDE0-D287EA5A3129}|SMH60Store\\SMH60Store.csproj|c:\\web_vi\\smarchand_h60_assignment1\\smh60a01\\smh60store\\smh60store\\migrations\\20260923025724_adddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DA8F609-46C9-9A44-CDE0-D287EA5A3129}|SMH60Store\\SMH60Store.csproj|solutionrelative:smh60store\\migrations\\20260923025724_adddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9DA8F609-46C9-9A44-CDE0-D287EA5A3129}|SMH60Store\\SMH60Store.csproj|c:\\web_vi\\smarchand_h60_assignment1\\smh60a01\\smh60store\\smh60store\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9DA8F609-46C9-9A44-CDE0-D287EA5A3129}|SMH60Store\\SMH60Store.csproj|solutionrelative:smh60store\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9DA8F609-46C9-9A44-CDE0-D287EA5A3129}|SMH60Store\\SMH60Store.csproj|c:\\web_vi\\smarchand_h60_assignment1\\smh60a01\\smh60store\\smh60store\\migrations\\20260923020058_addpartbclasses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DA8F609-46C9-9A44-CDE0-D287EA5A3129}|SMH60Store\\SMH60Store.csproj|solutionrelative:smh60store\\migrations\\20260923020058_addpartbclasses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9DA8F609-46C9-9A44-CDE0-D287EA5A3129}|SMH60Store\\SMH60Store.csproj|c:\\web_vi\\smarchand_h60_assignment1\\smh60a01\\smh60store\\smh60store\\models\\h60assignmentdbsmcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9DA8F609-46C9-9A44-CDE0-D287EA5A3129}|SMH60Store\\SMH60Store.csproj|solutionrelative:smh60store\\models\\h60assignmentdbsmcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\Migrations\\20260923023111_AddData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SMH60Store\\Migrations\\20260923023111_AddData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DA8F609-46C9-9A44-CDE0-D287EA5A3129}|SMH60Store\\SMH60Store.csproj|c:\\web_vi\\smarchand_h60_assignment1\\smh60a01\\smh60store\\smh60store\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DA8F609-46C9-9A44-CDE0-D287EA5A3129}|SMH60Store\\SMH60Store.csproj|solutionrelative:smh60store\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9DA8F609-46C9-9A44-CDE0-D287EA5A3129}|SMH60Store\\SMH60Store.csproj|c:\\web_vi\\smarchand_h60_assignment1\\smh60a01\\smh60store\\smh60store\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -108,22 +116,36 @@
               "RelativeDocumentMoniker": "SMH60Store\\Models\\H60AssignmentDbSmContext.cs",
               "ToolTip": "C:\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\Models\\H60AssignmentDbSmContext.cs",
               "RelativeToolTip": "SMH60Store\\Models\\H60AssignmentDbSmContext.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAAAM4AAABGAAAAAAAAAA==",
+              "ViewState": "AgIAAJgAAAAAAAAAAAAQwLYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-23T01:29:00.887Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "20260923020058_AddPartBClasses.cs",
-              "DocumentMoniker": "C:\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\Migrations\\20260923020058_AddPartBClasses.cs",
-              "RelativeDocumentMoniker": "SMH60Store\\Migrations\\20260923020058_AddPartBClasses.cs",
-              "ToolTip": "C:\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\Migrations\\20260923020058_AddPartBClasses.cs",
-              "RelativeToolTip": "SMH60Store\\Migrations\\20260923020058_AddPartBClasses.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAowEcAAAAAAAAAAAAAAA==",
+              "Title": "20260923025724_AddData.cs",
+              "DocumentMoniker": "C:\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\Migrations\\20260923025724_AddData.cs",
+              "RelativeDocumentMoniker": "SMH60Store\\Migrations\\20260923025724_AddData.cs",
+              "ToolTip": "C:\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\Migrations\\20260923025724_AddData.cs",
+              "RelativeToolTip": "SMH60Store\\Migrations\\20260923025724_AddData.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAoAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T02:00:59.079Z",
+              "WhenOpened": "2026-09-23T02:57:24.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20260923023111_AddData.cs",
+              "DocumentMoniker": "C:\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\Migrations\\20260923023111_AddData.cs",
+              "RelativeDocumentMoniker": "SMH60Store\\Migrations\\20260923023111_AddData.cs",
+              "ToolTip": "C:\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\Migrations\\20260923023111_AddData.cs",
+              "RelativeToolTip": "SMH60Store\\Migrations\\20260923023111_AddData.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAkwCAAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T02:31:11.633Z",
               "EditorCaption": ""
             },
             {
@@ -132,7 +154,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "20260923020058_AddPartBClasses.cs",
+              "DocumentMoniker": "C:\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\Migrations\\20260923020058_AddPartBClasses.cs",
+              "RelativeDocumentMoniker": "SMH60Store\\Migrations\\20260923020058_AddPartBClasses.cs",
+              "ToolTip": "C:\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\Migrations\\20260923020058_AddPartBClasses.cs",
+              "RelativeToolTip": "SMH60Store\\Migrations\\20260923020058_AddPartBClasses.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAowD0AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T02:00:59.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\Models\\Product.cs",
               "RelativeDocumentMoniker": "SMH60Store\\Models\\Product.cs",
@@ -144,7 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "OrderItem.cs",
               "DocumentMoniker": "C:\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\Models\\OrderItem.cs",
               "RelativeDocumentMoniker": "SMH60Store\\Models\\OrderItem.cs",
@@ -156,7 +191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Customer.cs",
               "DocumentMoniker": "C:\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\Models\\Customer.cs",
               "RelativeDocumentMoniker": "SMH60Store\\Models\\Customer.cs",
@@ -168,7 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\Models\\Order.cs",
               "RelativeDocumentMoniker": "SMH60Store\\Models\\Order.cs",
@@ -180,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "CartItem.cs",
               "DocumentMoniker": "C:\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\Models\\CartItem.cs",
               "RelativeDocumentMoniker": "SMH60Store\\Models\\CartItem.cs",
@@ -192,7 +227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "ShoppingCart.cs",
               "DocumentMoniker": "C:\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\Models\\ShoppingCart.cs",
               "RelativeDocumentMoniker": "SMH60Store\\Models\\ShoppingCart.cs",
@@ -204,7 +239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "ProductCategory.cs",
               "DocumentMoniker": "C:\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\Models\\ProductCategory.cs",
               "RelativeDocumentMoniker": "SMH60Store\\Models\\ProductCategory.cs",
@@ -216,7 +251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\Views\\ProductCategory\\Details.cshtml",
               "RelativeDocumentMoniker": "SMH60Store\\Views\\ProductCategory\\Details.cshtml",
@@ -228,7 +263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\Views\\ProductCategory\\Index.cshtml",
               "RelativeDocumentMoniker": "SMH60Store\\Views\\ProductCategory\\Index.cshtml",
@@ -240,7 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\Views\\Products\\Details.cshtml",
               "RelativeDocumentMoniker": "SMH60Store\\Views\\Products\\Details.cshtml",
@@ -252,7 +287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "ProductRepository.cs",
               "DocumentMoniker": "C:\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\Models\\ProductRepository.cs",
               "RelativeDocumentMoniker": "SMH60Store\\Models\\ProductRepository.cs",
@@ -264,7 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "IStoreRepository.cs",
               "DocumentMoniker": "C:\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\Models\\IStoreRepository.cs",
               "RelativeDocumentMoniker": "SMH60Store\\Models\\IStoreRepository.cs",
@@ -276,7 +311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\Views\\Products\\Index.cshtml",
               "RelativeDocumentMoniker": "SMH60Store\\Views\\Products\\Index.cshtml",
@@ -288,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "ProductCategoriesController.cs",
               "DocumentMoniker": "C:\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\Controllers\\ProductCategoriesController.cs",
               "RelativeDocumentMoniker": "SMH60Store\\Controllers\\ProductCategoriesController.cs",
@@ -300,7 +335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "ProductCategoryRepository.cs",
               "DocumentMoniker": "C:\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\Models\\ProductCategoryRepository.cs",
               "RelativeDocumentMoniker": "SMH60Store\\Models\\ProductCategoryRepository.cs",
@@ -312,7 +347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "UpdateStock.cshtml",
               "DocumentMoniker": "C:\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\Views\\Products\\UpdateStock.cshtml",
               "RelativeDocumentMoniker": "SMH60Store\\Views\\Products\\UpdateStock.cshtml",
@@ -324,7 +359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\Views\\Products\\Create.cshtml",
               "RelativeDocumentMoniker": "SMH60Store\\Views\\Products\\Create.cshtml",
@@ -336,7 +371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "ProductsController.cs",
               "DocumentMoniker": "C:\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "SMH60Store\\Controllers\\ProductsController.cs",
@@ -348,7 +383,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "UpdateBuySellPrice.cshtml",
               "DocumentMoniker": "C:\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\Views\\Products\\UpdateBuySellPrice.cshtml",
               "RelativeDocumentMoniker": "SMH60Store\\Views\\Products\\UpdateBuySellPrice.cshtml",
@@ -360,7 +395,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\Program.cs",
               "RelativeDocumentMoniker": "SMH60Store\\Program.cs",
@@ -368,8 +403,7 @@
               "RelativeToolTip": "SMH60Store\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T12:42:19.695Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T12:42:19.695Z"
             }
           ]
         }

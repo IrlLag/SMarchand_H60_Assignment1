@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SMH60Store.Models;
 
@@ -11,9 +12,11 @@ using SMH60Store.Models;
 namespace SMH60Store.Migrations
 {
     [DbContext(typeof(H60AssignmentDbSmContext))]
-    partial class H60AssignmentDbSmContextModelSnapshot : ModelSnapshot
+    [Migration("20260923025724_AddData")]
+    partial class AddData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
