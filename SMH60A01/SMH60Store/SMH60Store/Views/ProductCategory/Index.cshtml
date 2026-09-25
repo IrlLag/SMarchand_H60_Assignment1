@@ -4,33 +4,35 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-
-<table class="table">
-    <thead>
+<h1 class="subpage-title">List of Product Categories</h1>
+<div class="linkdiv">
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+</div>
+<div class="tablediv">
+    <table class="storetable">
+        <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.ProdCat)
+            <th class="storetableheader">
+                Category
             </th>
             <th></th>
         </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(model => item.ProdCat)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-prodcatid="@item.ProdCatId">Edit</a> |
-                <a asp-action="Details" asp-route-prodcatid="@item.ProdCatId">Details</a> |
-                <a asp-action="Delete" asp-route-prodcatid="@item.ProdCatId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+        @foreach (var item in Model) {
+            <tr>
+                <td class="itemname">
+                    @Html.DisplayFor(model => item.ProdCat)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-prodcatid="@item.ProdCatId">Edit</a> 
+                    <a asp-action="Details" asp-route-prodcatid="@item.ProdCatId">Details</a> 
+                    <a asp-action="Delete" asp-route-prodcatid="@item.ProdCatId">Delete</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

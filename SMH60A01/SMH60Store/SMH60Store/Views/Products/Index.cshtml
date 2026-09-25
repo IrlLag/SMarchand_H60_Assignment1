@@ -12,65 +12,63 @@
     ViewData["Title"] = "Index";
 }
 
-<h1 class="subpage-title">Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<p>
+<h1 class="subpage-title">List of Products</h1>
+<div class="linkdiv">
+        <a asp-action="Create">Create New +</a>
     
-    @if (ViewBag.search == "Category")
-    {
-        <a asp-action="Index">Sort by Product</a>
-    }
-    else
-    {
-        <a asp-action="Index" asp-route-search="Category">Sort by Category</a>
-    }
-
-</p>
-<table class="table">
-    <thead>
+        @if (ViewBag.search == "Category")
+        {
+            <a asp-action="Index">Sort by Product</a>
+        }
+        else
+        {
+            <a asp-action="Index" asp-route-search="Category">Sort by Category</a>
+        }
+</div>
+<div class="tablediv">
+    <table class="storetable">
+        <thead>
         <tr>
-            
-            <th>
+                
+            <th class="storetableheader">
                 @Html.DisplayNameFor(model => model.Description)
             </th>
             @if (ViewBag.search != "Category")
             {
-                <th>
+                <th class="storetableheader">
                     @Html.DisplayNameFor(model => model.Stock)
                 </th>
             }
-            <th>
+            <th class="storetableheader">
                 @Html.DisplayNameFor(model => model.SellPrice)
             </th>
-            <th></th>
+            <th class="storetableheader"></th>
         </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            
-            <td>
-                @Html.DisplayFor(model => item.Description)
-            </td>
-            @if (ViewBag.search != "Category")
-            {
-                <td>
-                    @Html.DisplayFor(model => item.Stock)
+        </thead>
+        <tbody>
+        @foreach (var item in Model) {
+            <tr>
+                
+                <td class="itemname">
+                    @Html.DisplayFor(model => item.Description)
                 </td>
-            }
-            <td>
-                @Html.DisplayFor(model => item.SellPrice)
-            </td>
-            <td>
-                <a asp-action="UpdateStock" asp-route-productid="@item.ProductId">Update Stock</a> |
-                <a asp-action="UpdateBuySellPrice" asp-route-productid="@item.ProductId">Update Prices</a> |
-                <a asp-action="Details" asp-route-productid="@item.ProductId">Details</a> |
-                <a asp-action="Delete" asp-route-productid="@item.ProductId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+                @if (ViewBag.search != "Category")
+                {
+                    <td>
+                        @Html.DisplayFor(model => item.Stock)
+                    </td>
+                }
+                <td>
+                    @Html.DisplayFor(model => item.SellPrice)$
+                </td>
+                <td>
+                    <a asp-action="UpdateStock" asp-route-productid="@item.ProductId">Update Stock</a> 
+                    <a asp-action="UpdateBuySellPrice" asp-route-productid="@item.ProductId">Update Prices</a> 
+                    <a asp-action="Details" asp-route-productid="@item.ProductId">Details</a> 
+                    <a asp-action="Delete" asp-route-productid="@item.ProductId">Delete</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
