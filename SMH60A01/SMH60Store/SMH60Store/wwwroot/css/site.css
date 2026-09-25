@@ -1,14 +1,16 @@
 html {
   font-size: 14px;
 }
-
+*{
+    color:var(--whitetext);
+}
 @media (min-width: 768px) {
   html {
     font-size: 16px;
   }
 }
 :root{
-    --background:#c4e0ff;
+    --background:#101a24;
     --whitetext:#ffffff;
 }
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
@@ -19,11 +21,12 @@ html {
   position: relative;
   min-height: 100%;
 }
+.navbar{
 
-header{}
-
+}
 body {
   margin-bottom: 60px;
+  background-color:var(--background);
 }
 h1{
     

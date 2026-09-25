@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\2467512\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\SMH60Store.csproj": {}
+    "C:\\Web_VI\\new_assignment1\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\SMH60Store.csproj": {}
   },
   "projects": {
-    "C:\\Users\\2467512\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\SMH60Store.csproj": {
+    "C:\\Web_VI\\new_assignment1\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\SMH60Store.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\2467512\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\SMH60Store.csproj",
+        "projectUniqueName": "C:\\Web_VI\\new_assignment1\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\SMH60Store.csproj",
         "projectName": "SMH60Store",
-        "projectPath": "C:\\Users\\2467512\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\SMH60Store.csproj",
-        "packagesPath": "C:\\Users\\2467512\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\2467512\\Web_VI\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\obj\\",
+        "projectPath": "C:\\Web_VI\\new_assignment1\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\SMH60Store.csproj",
+        "packagesPath": "C:\\Users\\spenc\\.nuget\\packages\\",
+        "outputPath": "C:\\Web_VI\\new_assignment1\\SMarchand_H60_Assignment1\\SMH60A01\\SMH60Store\\SMH60Store\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\2467512\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\spenc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,7 +46,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.300"
+        "SdkAnalysisLevel": "10.0.400"
       },
       "frameworks": {
         "net8.0": {
@@ -84,24 +85,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.30, 8.0.30]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.30, 8.0.30]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.30, 8.0.30]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.30, 8.0.30]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -110,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
