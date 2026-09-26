@@ -131,7 +131,7 @@ public class ProductCategoryController : Controller
         var productcategory = await _repo.GetById(prodcatid);
         if (productcategory != null)
         {
-            _repo.Delete(productcategory);
+            await _repo.Delete(productcategory);
         }
 
         return RedirectToAction(nameof(Index));

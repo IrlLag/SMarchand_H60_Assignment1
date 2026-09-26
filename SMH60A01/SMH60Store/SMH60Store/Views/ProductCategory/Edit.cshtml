@@ -4,10 +4,9 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h1 class="subpage-title">Edit</h1>
 
-<h4>ProductCategory</h4>
-<hr />
+
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
@@ -19,9 +18,7 @@
                 <span asp-validation-for="ProdCat" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Products" class="control-label"></label>
-                <input asp-for="Products" class="form-control" />
-                <span asp-validation-for="Products" class="text-danger"></span>
+                <input type="hidden" asp-for="Products" />
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
@@ -31,7 +28,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a class="linkdiv" asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {

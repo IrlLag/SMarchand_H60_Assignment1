@@ -30,14 +30,14 @@ namespace SMH60Store.Models
             _context.Products.Update(product);
             await _context.SaveChangesAsync();
         }
-
+ 
         public async Task Delete(Product product)
         {
             _context.Products.Remove(product);
             var orderitemList = await _context.OrderItems.Where(oi => oi.ProductId == product.ProductId).ToListAsync();
             _context.OrderItems.RemoveRange(orderitemList);
-            var cartItemLisy = await _context.CartItems.Where(oi => oi.ProductId == product.ProductId).ToListAsync();
-            _context.OrderItems.RemoveRange(orderitemList);
+            var cartItemListView = await _context.CartItems.Where(oi => oi.ProductId == product.ProductId).ToListAsync();
+            _context.CartItems.RemoveRange(cartItemListView);
             await _context.SaveChangesAsync();
         }
 
